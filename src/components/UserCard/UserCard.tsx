@@ -1,13 +1,14 @@
 import { LocalGithubUser } from 'type';
-import {UserStat } from '../UserStat/UserStat'
+import UserStat from '../UserStat/UserStat'
 import UserTitle from '../UserTitle/UserTitle'
 import UserInfo from '../UserInfo/UserInfo'
+
 import styles from './UserCard.module.scss';
 
 
 interface UserCardProps extends LocalGithubUser{ }
 
-export const UserCard = (props: UserCardProps) => (
+const UserCard = (props: UserCardProps) => (
   <div className={styles.userCard}>
     <img 
       src={props.avatar} 
@@ -34,3 +35,5 @@ export const UserCard = (props: UserCardProps) => (
       />
   </div>
 );
+
+export default UserCard;

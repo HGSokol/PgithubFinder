@@ -2,7 +2,6 @@ type SN = string | null
 
 export type LocalGithubUser = {
     "login": string,
-    "id": number,
     "avatar": string,
     "name": SN,
     "company": SN,

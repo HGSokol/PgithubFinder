@@ -1,11 +1,12 @@
 import { InfoItemProps, InfoItem } from 'components/InfoItem';
 import { LocalGithubUser } from 'type';
+import { ReactComponent as CompanyIcon } from 'assets/icon-company.svg'
+import { ReactComponent as LocationIcon } from 'assets/icon-location.svg'
+import { ReactComponent as TwitterIcon } from 'assets/icon-twitter.svg'
+import { ReactComponent as BlogIcon } from 'assets/icon-website.svg'
+
 import styles from './UserInfo.module.scss';
 
-import {ReactComponent as CompanyIcon} from 'assets/icon-company.svg'
-import {ReactComponent as LocationIcon} from 'assets/icon-location.svg'
-import {ReactComponent as TwitterIcon} from 'assets/icon-twitter.svg'
-import {ReactComponent as BlogIcon} from 'assets/icon-website.svg'
 
 interface UserInfoProps extends Pick<
   LocalGithubUser,

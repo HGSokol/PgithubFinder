@@ -1,7 +1,7 @@
-import styles from './Search.module.scss';
-
-import {ReactComponent as SearchIcon} from 'assets/icon-search.svg'
+import { ReactComponent as SearchIcon } from 'assets/icon-search.svg'
 import { Button } from 'components/Button';
+
+import styles from './Search.module.scss';
 
 
 interface SearchProps { 
@@ -12,12 +12,13 @@ interface SearchProps {
 type FormFields = {
   username: HTMLInputElement,
 }
+
 const Search = ({ hasError, onSubmit }: SearchProps) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement & FormFields>) => {
     e.preventDefault();
 
     const text = e.currentTarget.username.value
-    if(text) {
+    if(text.trim()) {
       onSubmit(text);
       e.currentTarget.reset();
     }
@@ -46,4 +47,4 @@ const Search = ({ hasError, onSubmit }: SearchProps) => {
     </form>
 )};
 
-export default Search
+export default Search;

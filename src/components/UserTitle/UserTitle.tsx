@@ -1,9 +1,11 @@
 import { LocalGithubUser } from 'type';
+
 import styles from './UserTitle.module.scss';
 
+
 interface UserTitleProps extends Pick<
-LocalGithubUser,
-'name' | 'login' | 'created'
+  LocalGithubUser,
+  'name' | 'login' | 'created'
 >{}
 
 const localDate = new Intl.DateTimeFormat('en-GB', {
@@ -12,10 +14,8 @@ const localDate = new Intl.DateTimeFormat('en-GB', {
   year: 'numeric',
 })
 
-
-export const UserTitle = ({ created, login, name}: UserTitleProps) => {
+const UserTitle = ({ created, login, name}: UserTitleProps) => {
   const joinedDate = localDate.format(new Date(created))
-
 
   return(
     <div className={styles.userTitle}>

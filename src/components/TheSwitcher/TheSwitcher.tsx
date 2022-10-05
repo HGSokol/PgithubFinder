@@ -1,9 +1,9 @@
-import {useEffect, useState} from 'react'
+import { useEffect, useState } from 'react'
+
+import { ReactComponent as MoonIcon } from 'assets/icon-moon.svg'
+import { ReactComponent as SunIcon } from 'assets/icon-sun.svg'
 
 import styles from './TheSwitcher.module.scss';
-
-import { ReactComponent as MoonIcon} from 'assets/icon-moon.svg'
-import { ReactComponent as SunIcon} from 'assets/icon-sun.svg'
 
 
 const TheSwitcher = () => {
@@ -14,7 +14,6 @@ const TheSwitcher = () => {
   useEffect(() => {
     document.body.setAttribute('data-theme', isDark? 'dark' : 'light');
   }, [isDark]);
- 
   
   return (
     <div className={styles.theSwitcher} onClick={() =>setDark(!isDark)}>
@@ -24,4 +23,4 @@ const TheSwitcher = () => {
   )
 };
 
-export default TheSwitcher
+export default TheSwitcher;
